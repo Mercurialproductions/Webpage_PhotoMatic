@@ -16,8 +16,8 @@ html {
   top: 5.3125rem;
   background-image:url("../images/banner-landingpage.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
-  /* height:28rem; */
+  background-size: cover;
+  height:43.5rem;
   /* position: relative;
   top:85px; */
   z-index: 0;
@@ -108,12 +108,15 @@ header .mobile {
   }
 
   header .mobile {
-    display: block;
+    display: flex;
     width: 100%;
   }
 
   header .content {
     padding: .5rem 0;
+    margin-right: 0px;
+    width:100%;
+    flex-shrink: 0;
   }
 
   header .mobile ul {
@@ -191,18 +194,29 @@ header .mobile {
 }
 
 @media only screen and (max-width: 760px) {
+
+.main-content {
+height:28rem;
+
+}
+
   #sign-up-section {
     align-items: center;
     justify-content: center;
     height: 28rem;
+
+
   }
 
   #sign-up-cta {
-    position: static;
+    /* position: static; */
     width: auto;
     height: auto;
     background-color: transparent;
     border: none;
+    margin-bottom: 0px;
+    margin-left:0px;
+    padding:0px;
   }
 
   #sign-up-cta .content {
@@ -227,6 +241,13 @@ header .mobile {
     height: 20rem;
   }
 
+  .main-content {
+  background-size:cover;
+  background-position: right;
+
+
+  }
+
   #sign-up-cta h1 {
     font-size: 2.25rem;
   }
@@ -234,6 +255,11 @@ header .mobile {
   #sign-up-cta h2 {
     font-size: 2rem;
   }
+
+  #sign-up-cta .content {
+    width:100%;
+  }
+
 }
 
 /* Features Section */
@@ -292,15 +318,22 @@ header .mobile {
 }
 
 @media only screen and (max-width: 760px) {
-  #features-section {
+  /* #features-section {
     flex-flow: column;
     padding: 0;
-  }
+  } */
 
   .feature {
-    margin: 0;
+    margin: 1rem;
     padding: 1.25rem 1rem 0 1rem;
   }
+}
+
+ @media only screen and (max-width: 450px) {
+  #features-section {
+    flex-direction:column;
+  }
+
 }
 
 /* Filters Section */
@@ -372,16 +405,16 @@ header .mobile {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height:314.09px;
+    /* height:314.09px; */
   }
 
-  .image-container img {
+  /* .image-container img {
     width:100%;
-  }
+  } */
 
-  #filters-section .extra {
+  /* #filters-section .extra {
     display: none;
-  }
+  } */
 }
 
 /* Quotes Section */
@@ -416,7 +449,7 @@ header .mobile {
     padding: 1.875rem .625rem;
   }
 
-  #quotes-section quote {
+  #quotes-section .quote {
     font-size: 1.5rem;
     line-height: 1.4;
   }
@@ -426,6 +459,13 @@ header .mobile {
     padding-top: 1rem;
     margin: auto;
   }
+}
+
+@media only screen and (max-width: 450px) {
+ #quotes-section .content {
+   flex-direction:column;
+ }
+
 }
 
 /* Footer */
